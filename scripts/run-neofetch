@@ -1,0 +1,8 @@
+#!/bin/bash
+# 在终端输出卡片位置打开xterm运行neofetch
+# 右栏位置：x=1150, y=578, 宽=754, 高=488
+DISPLAY=:0 xterm -geometry 90x18+1150+578 \
+    -bg "#101c32" -fg "#00ff88" \
+    -fa "WenQuanYi Micro Hei Mono" -fs 14 \
+    -title "Neofetch" \
+    -e "neofetch; echo; echo '按 Enter 关闭'; read" &

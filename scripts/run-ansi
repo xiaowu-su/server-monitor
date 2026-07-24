@@ -1,0 +1,5 @@
+#!/bin/bash
+# 清空日志，执行命令，ANSI转HTML显示
+> /tmp/terminal_output.log
+echo ">>> $@" >> /tmp/terminal_output.log
+"$@" 2>&1 | aha >> /tmp/terminal_output.log
